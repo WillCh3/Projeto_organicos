@@ -1,0 +1,53 @@
+{% extends "base_gerencia.html" %}
+    {% block content %}
+        <div class="container-fluid bg-cd">
+            <div>
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 edicao_main">
+                    <div>
+                        <a class="btn-bck" href="/cadastro">
+                            <img src="../static/img/voltar-ico.png" height="30px" alt="icone voltar">
+                            <h3>Voltar</h3>
+                        </a>
+                    </div>
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h1-form-add">Editar Produto - {{nome_produto}}</h1>
+                    </div>
+
+                    <form action="/alteracoes_produto" method="GET">
+                        <fieldset>
+                        <input type="text" value="{{nome_produto}}" name="antigo_nome"class="visually-hidden form-control" required autofocus>
+                        <label for="nome" class="label">Nome:</label>
+                        <input type="text" value="{{nome_produto}}" name="novo_nome"  id="nome" class="form-control" placeholder="Nome do Produto" required autofocus>
+                        
+                        <label for="quantidade" class="label">Quantidade:</label>
+                        <input type="number" value="{{quantidade}}" data-type="number" name="quantidade"  id="quantidade" class="form-control" placeholder="Quantidade" required>
+
+                        <label for="nome" class="label">Preco  R$:</label>
+                        <input type="text" value="{{valor}}" data-type="currency" name="preco"  id="preco" class="form-control" placeholder="Nome do Produto" required autofocus>
+                        
+                        <br>
+                        <div class="edicao_botoes">
+                            <button class="btn btn-success" type="submit">Atualizar</button>
+                    </fieldset>
+                    </form>
+                        <a href="#popup1"><button class="btn btn-danger">Tirar do Estoque</button></a>
+                    </div>
+                        <div id="popup1" class="overlay">
+                            <div class="popup">
+                                <h2>Tirar do Estoque</h2>
+                                <a class="close" href="#">&times;</a>
+                                <div class="content">
+                                    Tem certeza que deseja retirar {{nome_produto}} ?
+                                    <br>
+                                    <p>Este Produto não aparecerá mais no catálogo de vendas para os clientes.</p>
+                                </div>
+                                <div class="linha-del-btn">
+                                    <a href="/cadastro"><button class="btn">Sair</button></a>
+                                    <a href="/deletar_produto/{{nome_produto}}"><button class="btn btn-danger">Tirar do Estoque</button></a>
+                                </div>
+                            </div>
+                        </div>
+                </main>
+            </div>
+        </div>
+{% endblock %}

@@ -1,0 +1,202 @@
+{% extends "base_gerencia.html" %}
+    {% block content %} 
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-success">
+				Relatório 
+			</h3>
+		</div>
+	</div>
+	<div  class="row">
+		<div class="col-md-4">
+			<h3>
+				Produtos com maior e menor estoque
+			</h3>
+			<div class="card text-white bg-success card-relatorio">
+				<h5 class="card-header bg-success">
+					Produtos com maior estoque
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+						{{mais_prod.index[0]}} -- {{mais_prod['quantidade'][0]}}
+					</p>
+					<p class="card-text">
+						{{mais_prod.index[1]}} -- {{mais_prod['quantidade'][1]}}
+					</p>
+					<p class="card-text">
+						{{mais_prod.index[2]}} -- {{mais_prod['quantidade'][2]}}
+					</p>
+				</div>
+				<div class="card-footer bg-success">
+					necessário gerar vendas
+				</div>
+			</div>
+			<div class="card text-white bg-danger card-relatorio">
+				<h5 class="card-header bg-danger">
+					Produtos com menor estoque
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+						{{menos_prod.index[0]}} -- {{menos_prod['quantidade'][0]}}
+					</p>
+					<p class="card-text">
+						{{menos_prod.index[1]}} -- {{menos_prod['quantidade'][1]}}
+					</p>
+					<p class="card-text">
+						{{menos_prod.index[2]}} -- {{menos_prod['quantidade'][2]}}
+					</p>
+				</div>
+				<div class="card-footer  bg-danger">
+					Dicionário adquirir mais destes produtos.
+				</div>
+			</div>
+		</div>
+		<div class="col-md-8 scroll_table">
+			<h3 class="text-center">
+				Produtos vendidos no dia
+			</h3>
+			<table class="table table-bordered ">
+				<thead>
+					<tr>
+						<th>
+							Id
+						</th>
+						<th>
+							Produto
+						</th>
+						<th>
+							Quantidade
+						</th>
+						<th>
+							Valor
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for id, item in df.iterrows()%}
+					{% if id % 2 == 0 %}
+					<tr>
+						<td>
+							{{id}}
+						</td>
+						<td>
+							{{df.loc[id, 'Produto']}}
+						</td>
+						<td>
+							{{df.loc[id, 'Quantidade']}}
+						</td>
+						<td>
+							{{df.loc[id, 'valor']}}
+						</td>
+					</tr>
+					{% else %}
+					<tr class="table-success">
+						<td>
+							{{id}}
+						</td>
+						<td>
+							{{df.loc[id, 'Produto']}}
+						</td>
+						<td>
+							{{df.loc[id, 'Quantidade']}}
+						</td>
+						<td>
+							{{df.loc[id, 'valor']}}
+						</td>
+					</tr>
+					{% endif %}
+					{% endfor %}
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-center text-success">
+				Métricas de vendas
+			</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="card text-white bg-success card-relatorio">
+				<h5 class="card-header bg-success">
+					Produto mais vendido
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+						{{mais_vend.index[0]}}- - - -{{mais_vend['Quantidade'][0]}}- - - -unidades
+					</p>
+					<p class="card-text">
+						{{mais_vend.index[1]}}- - - -{{mais_vend['Quantidade'][1]}}- - - -unidades
+					</p>
+					<p class="card-text">
+						{{mais_vend.index[2]}}- - - -{{mais_vend['Quantidade'][2]}}- - - -unidades
+					</p>
+				</div>
+				<div class="card-footer bg-success">
+					Produto campeão de vendas
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card text-white bg-success card-relatorio">
+				<h5 class="card-header bg-success">
+					Produto menos vendido
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+						{{menos_vend.index[0]}}- - - -{{menos_vend['Quantidade'][0]}}- - - -unidades
+					</p>
+					<p class="card-text">
+						{{menos_vend.index[1]}}- - - -{{menos_vend['Quantidade'][1]}}- - - -unidades
+					</p>
+					<p class="card-text">
+						{{menos_vend.index[2]}}- - - -{{menos_vend['Quantidade'][2]}}- - - -unidades
+					</p>
+				</div>
+				<div class="card-footer bg-success">
+					Cuidado ao adiquirir mais.
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card text-white bg-success card-relatorio">
+				<h5 class="card-header bg-success">
+					Ticket médio de vendas
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+						R$: {{ticke_medio.round()}}
+					</p>
+				</div>
+				<div class="card-footer bg-success">
+					Ticket médio BOM
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card text-white bg-success card-relatorio">
+				<h5 class="card-header bg-success">
+					Total de vendas no dia
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+						R$: {{total_vendas}}
+					</p>
+				</div>
+				<div class="card-footer bg-success">
+					Otimas vendas
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/scripts.js"></script>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends "base_gerencia.html" %}
+    {% block content %}
+
+    <div class="bg-cd">
+      
+        <fieldset class="field-add">
+            <h1 class="h1-form-add">Cadastro de produto</h1>
+                <form class="form-add" action="/listar" method="get">
+                    <div class="linha-form">
+                        <label class="label-add " for="Cadastro">Cadastro</label>
+                        <input id="Cadastro" class="form-control" name="produto" required >
+                    </div>
+                    <div class="linha-form">
+                        <label class="label-add" for="Preço">Preço</label>
+                        <input id="preco" class="form-control" name="preco" type="number" step=".15" />
+                    </div>
+
+                    <div class="linha-form">
+                        <label class="label-add" for="quantidade">Quantidade</label>
+                        <input type="number" class="form-control" name="quantidade"/>
+                    </div>
+                
+                        <input id="cadastrar" class="btn btn-success btn-lg btn-block" name="Cadastro" type="submit" value="Cadastrar">  
+                </form>
+        </fieldset>
+    </div>
+        <h2 class="h1-title-cad">Produtos cadastrados<div class="rcv-btn-row"><a href="/recuperacao" class="btn-rcv"><img src="/static/img/recuperaca-ico.png" height="30px" alt="icone recuperacao"><h2>Recuperar itens Deletados</h2> </a></div></h2>
+    <div class="pesquisa-flex">
+        <form action="/cadastro_pesquisa"class="col-12 col-lg-auto mb-3 mb-lg-0 pesquisa" role="search" method="GET">
+            <input type="search" name="pesquisa"class="form-control" placeholder="Pesquise aqui" aria-label="Search">
+        </form>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle btn-filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Filtrar por...
+            </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="/cadastro_filtro_preco_crescente">Preço crescente</a></li>
+                    <li><a class="dropdown-item" href="/cadastro_filtro_preco_decrescente">Preço decrescente</a></li>
+                    <li><a class="dropdown-item" href="/cadastro_filtro_quantidade_crescente">Quantidade crescente</a></li>
+                    <li><a class="dropdown-item" href="/cadastro_filtro_quantidade_decrescente">Quantidade decrescente</a></li>
+                    <li><a class="dropdown-item" href="/cadastro_filtro_alfabetico">Ordem alfabética</a></li>
+                </ul>
+        </div>
+    </div>
+    <div class="col-md-6 scroll-table">
+        <table class="tabela-cadastro table">
+            <thead>
+                <tr>
+                    <th>
+                        Produto
+                    </th>
+                    <th>
+                        Quantidade
+                    </th>
+                    <th>
+                        Valor
+                    </th>
+                    <th>
+         
+                    </th>
+                </tr>
+            </thead>
+        <tbody>
+            {% for index,row in catalogo.iterrows() %}
+                <tr><td>{{index}}</td><td>{{row['quantidade']}}</td><td>{{row['valor']}}</td><td id="btn-cad"><a href="/cadastro/{{index.replace(' ','_')}}"><button class="btn btn-info btn-lg btn-block texto-centro" type="button">Editar</button></a></td></tr>
+            {% endfor %}
+        </tbody>
+        </table>
+    </div>
+    </div>
+    </div>
+{% endblock %}

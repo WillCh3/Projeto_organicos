@@ -1,0 +1,204 @@
+produtos,quantidade,valor
+Azedinha,51,3.0
+Baroa,33,2.0
+Batata,41,3.0
+Batata-doce,27,0.5
+Berdana,12,1.5
+Beterraba,53,0.5
+Batata-doce (folha),41,2.0
+Beldroega,43,4.5
+Beldroega-grande,15,2.0
+Beldroegão,28,3.0
+Berdana (folha),12,1.5
+Bertalha,38,2.5
+Bertalha-coração,43,1.0
+Bredo,25,4.5
+Brócolis,6,3.5
+Cabotchan,36,4.5
+Cará,43,1.0
+Cará-do-ar,10,1.5
+Cará-moela,45,4.5
+Castanha-de-baru,13,4.0
+Castanha-de-caju,51,5.0
+Castanha-de-macaco,45,3.0
+Castanha-do-maranhão,16,3.5
+Castanha-do-pará,25,1.5
+Castanheiro-do-mato,39,3.5
+Caxi,16,1.0
+Cebola,53,1.0
+Celósia (sementes),47,1.5
+Cenoura,25,1.0
+Centeio,18,5.0
+Cevada,21,5.0
+Chalota,12,2.5
+Chia,23,3.0
+Chichá,35,2.0
+Chichá-do-norte,9,2.5
+Chuchu,54,0.5
+Couve-nabo,36,1.0
+Couve-rábano,47,4.5
+Cumaru,59,2.5
+Cambuquira,52,2.0
+Capeba,5,3.5
+Capiçoba,20,3.0
+Capuchinha,22,3.5
+Caruru,50,2.5
+Caruru-manteiga,35,5.0
+Catalonha,1,3.5
+Cebolinha,30,2.5
+Celósia,25,5.0
+Chaya,50,2.5
+Chicória,53,2.5
+Coentro,17,0.5
+Comelina,51,5.0
+Couve,1,0.5
+Couve-de-bruxelas,27,3.0
+Couve-de-milão,37,4.5
+Couve-de-saboia,24,4.0
+Couve-flor,30,4.5
+Couve-lombarda,36,0.5
+Couve-nabo (folha),43,5.0
+Couve-rábano,19,2.5
+Couvinha,45,4.0
+Dendê Dill,39,4.0
+Ervilha,26,2.5
+Ervilha-de-pombo,19,0.5
+Escorcioneira,21,4.5
+Echalota,0,5.0
+Embaúba,38,3.5
+Endívia,33,1.0
+Erva-cidreira,2,5.0
+Erva-doce,7,5.0
+Erva-luísa,39,1.5
+Erva-mate,5,1.5
+Escarola,11,5.0
+Espinafre,14,1.0
+Espinafre-de-okinawa,25,2.5
+Estragão,8,3.5
+Fava,40,1.0
+Feijão,4,1.5
+Feijão-andu,48,3.0
+Feijão-azuki,35,3.5
+Feijão-boer,59,2.0
+Fruta-pão,59,5.0
+Feijão (broto),32,5.0
+Funcho,22,2.0
+Gengibre,38,4.5
+Gergelim,34,3.5
+Girassol (semente),23,1.5
+Gobô,0,4.0
+Goya,53,1.0
+Grão-de-bico,51,0.5
+Grumixama,53,1.5
+Guandu,20,1.0
+Gergelim (broto),4,3.0
+Gobô (folha),7,2.5
+Grão-de-bico (broto),37,2.5
+Guasca,34,2.5
+Hibisco,24,3.5
+Hortelã,40,1.5
+Inajá,4,5.0
+Inhame Inhame (folha),31,4.5
+Jaca verde,41,2.5
+Jalapeño,58,2.0
+Jicama,33,3.0
+Labaca,23,1.5
+Lentilha,39,3.5
+Linhaça,21,5.0
+Lírio-do-brejo,36,3.5
+Labaca (folha),57,4.5
+Lambari-da-horta,33,4.5
+Lentilha (broto),9,5.0
+Linhaça (broto),5,4.5
+Louro,14,1.5
+Macassá,52,4.5
+Malagueta,3,2.5
+Malte,28,1.0
+Mandioca,57,1.0
+Mandioquinha,34,2.0
+Maxixe,14,2.0
+Mendubiguaçu,53,1.5
+Milho,34,5.0
+Mitsubá,23,4.5
+Mogango,37,3.5
+Monguba,29,4.5
+Moranga,45,3.5
+Madressilva,2,1.0
+Major-gomes,47,4.5
+Manjericão,53,4.5
+Manjerona,53,1.0
+Maria-gorda,45,4.5
+Mostarda,4,1.0
+Nabo,23,0.5
+Nabo-da-suécia,53,3.0
+Nabo-mexicano,29,0.5
+Nabo-sueco,47,3.0
+Noz,21,5.0
+Nozes-da-macadâmia,27,4.0
+Nabo-da-suécia (folha),6,2.0
+Nabo-sueco (folha),17,3.0
+Oliva,42,3.5
+Ora-pro-nobis,42,1.5
+Orégano,30,1.5
+Orelha-de-coelho,23,2.5
+Palmito,19,2.5
+Paru,10,1.0
+Pau-rei,39,0.5
+Pé-de-anta,21,2.5
+Pelega,21,3.0
+Pepino,6,3.0
+Pepino-japonês,50,1.5
+Pequi,28,3.0
+Pimenta,49,2.0
+Pimentão,14,2.5
+Pinhão,44,4.5
+Pistache,59,3.5
+Peixinho-da-horta,9,2.5
+Palma,24,4.5
+Picão,30,2.0
+Quiabo,44,3.5
+Quinoa Quina,4,3.0
+Rabanete,7,3.0
+Rábano,43,4.0
+Rábano-silvestre,31,1.5
+Raiz-forte,45,3.0
+Rutabaga,59,2.0
+Radicchio,40,3.0
+Repolho,46,1.5
+Rúcula,45,1.0
+Ruibarbo,30,5.0
+Rutabaga (folha),44,1.0
+Shissô (sementes),10,5.0
+Soja,38,5.0
+Sorgo,45,5.0
+Salsa,5,0.5
+Salsão,5,5.0
+Sálvia,32,2.0
+Serralha,27,3.5
+Shissô,2,3.0
+Soja (broto),12,2.5
+Taioba (batata),20,4.5
+Taro,40,3.5
+Tomate,7,2.0
+Tomate-cereja,9,5.0
+Tonka,52,3.0
+Trigo,52,2.5
+Tupinambo,40,2.0
+Taioba,29,2.0
+Taro (folha),34,1.5
+Tingensai,27,0.5
+Tomilho,48,1.5
+Trapoeraba,22,4.5
+Trevo,50,0.5
+Trigo,5,3.5
+Urucum Urtiga,27,2.5
+Vagem Vinagreira,56,2.5
+Wasabi,36,0.5
+Avelã,27,0.5
+Amendoim-da-mata,17,3.0
+Arroz-selvagem,45,2.5
+Azeitona,27,4.5
+Aipo,23,5.0
+Alcachofra,6,1.5
+feijao,3,2.55
+Aveia,120,2.1

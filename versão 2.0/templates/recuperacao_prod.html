@@ -1,0 +1,48 @@
+{% extends "base_gerencia.html" %}
+    {% block content %}
+    <div class="container-fluid bg-cd">
+        <div>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 edicao_main">
+                <div>
+                    <a class="btn-bck" href="/cadastro">
+                        <img src="../static/img/voltar-ico.png" height="30px" alt="icone voltar">
+                        <h3>Voltar</h3>
+                    </a>
+                </div>
+                    <h2 class="h1-title-cad">Produtos Deletados</h2>
+                    <div class="pesquisa-flex">
+                        <form action="/recuperacao_pesquisa"class="col-12 col-lg-auto mb-3 mb-lg-0 pesquisa" role="search" method="GET">
+                            <input type="search" name="pesquisa"class="form-control" placeholder="Pesquise aqui" aria-label="Search">
+                        </form>
+                    </div>
+                    <div class="col-md-6 scroll-table">
+                        <table class="tabela-cadastro table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Produto
+                                    </th>
+                                    <th>
+                                        Quantidade
+                                    </th>
+                                    <th>
+                                        Valor
+                                    </th>
+                                    <th>
+                        
+                                    </th>
+                                </tr>
+                            </thead>
+                        <tbody>
+                            {% for index,row in itens_deletados.iterrows() %}
+                                <tr><td>{{index}}</td><td>{{row['quantidade']}}</td><td>{{row['valor']}}</td><td id="btn-cad"><a href="/recuper_para_cad/{{index}}"><button class="btn btn-info btn-lg btn-block texto-centro" type="button">Recuperar</button></a></td></tr>
+                            {% endfor %}
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+            </main>
+        </div>
+    </div>
+{% endblock %}
